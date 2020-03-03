@@ -20,7 +20,7 @@ jobs:
         cd /home/
         mkdir -p ws_rmf/src
         cd ws_rmf/src
-        git clone https://github.com/osrf/rmf_core
+        git clone https://github.com/Yadunund/rmf_core
         cd /home/ws_rmf/src/rmf_core
         git checkout "${GITHUB_REF:11}"
     - name: build
