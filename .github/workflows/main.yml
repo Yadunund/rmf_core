@@ -13,7 +13,7 @@ jobs:
         mkdir -p ws_rmf/src
         cd ws_rmf/src
         git clone https://github.com/Yadunund/rmf_core
-    - name: deps
+    - name: rosdep
       shell: bash
       run: |
         sudo apt update
@@ -27,3 +27,9 @@ jobs:
         cd /home/ws_rmf
         source /opt/ros/eloquent/setup.bash
         colcon build
+    - name: test
+      shell: bash
+      run: |
+        cd /home/ws_rmf
+        source install/setup.bash
+        ./build/rmf_traffic/test_rmf_traffic
