@@ -21,8 +21,6 @@ jobs:
         mkdir -p ws_rmf/src
         cd ws_rmf/src
         git clone https://github.com/Yadunund/rmf_core
-        cd ../
-        git checkout "${GITHUB_REF:11}"
     - name: build
       shell: bash
       run: |
