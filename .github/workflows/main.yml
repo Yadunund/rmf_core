@@ -26,5 +26,6 @@ jobs:
       run: |
         cd /home/ws_rmf
         source /opt/ros/eloquent/setup.bash
+        rosdep update
         rosdep install --from-paths src --ignore-src -r -y
         colcon build
