@@ -14,8 +14,8 @@ jobs:
         cd ws_rmf/src
         git clone https://github.com/Yadunund/rmf_core
     - name: deps
-      run: |
       shell: bash
+      run: |
         sudo apt update
         cd /home/ws_rmf
         source /opt/ros/eloquent/setup.bash
@@ -26,4 +26,4 @@ jobs:
       run: |
         cd /home/ws_rmf
         source /opt/ros/eloquent/setup.bash
-        colcon bui  ld
+        colcon build
